@@ -22,7 +22,6 @@ def all_products(page_number):
     paginator = Paginator(products, 25)
     context = {
         'products': paginator.get_page(page_number),
-        'addons': addons
     }
     return context
 
