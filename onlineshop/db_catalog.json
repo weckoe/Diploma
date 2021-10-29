@@ -1,0 +1,135 @@
+[
+  {
+    "model": "catalog.addon",
+    "pk": 1,
+    "fields": {
+      "name": "Защитное стекло",
+      "description": "Для защиты средств связи, бытовой электроники и других предметов от царапин и случайных механических повреждений используются специальные стекла и пленки. Такие многослойные светопрозрачные листовые композиции на основе силикатного стекла и полимеров сочетают в себе защитные и эстетические свойства.",
+      "category": 2,
+      "price": "10.00",
+      "slug": "protglass"
+    }
+  },
+  {
+    "model": "catalog.addon",
+    "pk": 2,
+    "fields": {
+      "name": "Чехол",
+      "description": "Покрышка из ткани или кожи для вещей.",
+      "category": 2,
+      "price": "10.00",
+      "slug": "protcase"
+    }
+  },
+  {
+    "model": "catalog.addon",
+    "pk": 3,
+    "fields": {
+      "name": "Наушники",
+      "description": "Стереофонические нау́шники (наушники) — два телефона с оголовьем, предназначенные для подключения к бытовым радиоэлектронным аппаратам. Наушники представляют собой пару небольших по размеру головных телефона или блока наушника, надеваемых на голову или вставляемых прямо в ушные каналы. ... head — голова, phone — телефон).",
+      "category": 2,
+      "price": "300.00",
+      "slug": "headphones"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Asus ZenBook 14 UM425U",
+      "description": "Тонкость и легкость во всем!\r\nНовый ноутбук ZenBook 14 на базе мобильного процессора AMD серии Ryzen™ 4000 представляет собой тонкое и легкое устройство с высокой производительностью и полноценным комплектом интерфейсов (разъемы HDMI, USB-C®, USB-A и microSD). Эта универсальная модель с классическим дизайном отлично подойдет для всех, кто постоянно находится в движении.",
+      "category": 1,
+      "price": "200.00",
+      "slug": "asus_zenbook_14_um425u",
+      "image": "static/img/Без_названия_2_1.png",
+      "big_image": "static/img/Без_названия_2.jpg",
+      "cart_image": "",
+      "quantity": 1,
+      "addons": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Xiaomi Mi 11 Lite",
+      "description": "Уникальный дизайн\r\nMi 11 Lite обладает сверхлегким весом 159 г и толщиной всего 6,81 мм. Ощутите новые эмоции, ведь симметричные и супертонкие боковые и верхние грани шириной 1,88 мм расширяют пространство для большого количества визуальных эффектов.",
+      "category": 2,
+      "price": "300.00",
+      "slug": "xiaomi_11_lite",
+      "image": "static/img/imgonline-com-ua-Resize-5Z6PNTIeKG.jpg",
+      "big_image": "static/img/imgonline-com-ua-Resize-AGOLdY3OxJsk8R.jpg",
+      "cart_image": "",
+      "quantity": 96,
+      "addons": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Xiaomi Mi Desktop Monitor 27",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p",
+      "category": 3,
+      "price": "350.00",
+      "slug": "mi_desktop_monitor_27",
+      "image": "static/img/monitor_2QqDkTP.jpg",
+      "big_image": "static/img/imgonline-com-ua-Resize-ov64h7Io2w.jpg",
+      "cart_image": "",
+      "quantity": 93,
+      "addons": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Test Notebook",
+      "description": "Test",
+      "category": 1,
+      "price": "234.00",
+      "slug": "test_notebook",
+      "image": "catalog/static/img/Без_названия_4.jpeg",
+      "big_image": "",
+      "cart_image": "",
+      "quantity": 323,
+      "addons": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Ноутбуки",
+      "description": "Ноутбук (англ. notebook — блокнот) — переносной компьютер, в корпусе которого объединены типичные компоненты ПК, включая дисплей, клавиатуру и устройство указания (обычно сенсорная панель или тачпад), а также аккумуляторные батареи. Ноутбуки отличаются небольшими размерами и весом, время автономной работы ноутбуков варьируется в пределах от 2 до 15 часов.",
+      "slug": "notebook"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Смартфоны",
+      "description": "Смартфо́н (англ. smartphone — умный телефон) — мобильный телефон (современный — как правило, с сенсорным экраном), дополненный функциональностью карманного персонального компьютера.",
+      "slug": "smartphone"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Мониторы",
+      "description": "Монитор — устройство оперативной визуальной связи пользователя с управляющим устройством и отображением данных, передаваемых с клавиатуры, мыши или центрального процессора.",
+      "slug": "montor"
+    }
+  }
+]

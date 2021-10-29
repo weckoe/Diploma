@@ -1,0 +1,76 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<head>
+    <title>Cart</title>
+</head>
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    {% for product in cart_product %}
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+
+                            <th scope="col" class="text-right">Price</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><img src="https://dummyimage.com/50x50/55595c/fff"/></td>
+                            <td>{{ product.product.name }}</td>
+                            <td>
+                                <form method="post" action="{% url 'cart:change_quantity' product.id  %}">
+                                    {% csrf_token %}
+                                    <div class="container">
+                                        <h1>Quantity</h1>
+                                        <hr>
+                                        <input name="quantity" max="{{ product.product.quantity }}"
+                                               value="{{ product.quantity }}">
+                                        <button href="{% url 'cart:change_quantity' product.id %}">Change</button>
+                                    </div>
+                                </form>
+                            </td>
+                            <td class="text-right">{{ product.product.price }}</td>
+                            <td class="text-right">
+                                <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>Total</strong></td>
+                        <td class="text-right"><strong>{{ full_price }}</strong></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase">
+                        <a href="{% url 'cart:checkout' %}">Checkout</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

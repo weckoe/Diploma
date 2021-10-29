@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/registration_styles.css">
+</head>
+<form method="post">
+    {% csrf_token %}
+    <div class="container">
+        <h1>Login</h1>
+        <hr>
+        {{ login_form.as_p }}
+
+        <button type="submit" class="registerbtn">Login</button>
+    </div>
+
+</form>
