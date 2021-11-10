@@ -36,4 +36,8 @@ def single_product(product_slug):
 
 
 def is_product_in_cart(product, user):
-    return CartProduct.objects.filter(product=product, cart__user=user, cart__active=True).first()
+
+    if user.is_authenticated:
+        CartProduct.objects.filter(product=product, cart__user=user, cart__active=True).first()
+        return True
+    return False

@@ -1,0 +1,864 @@
+[
+  {
+    "model": "catalog.addon",
+    "pk": 1,
+    "fields": {
+      "name": "Защитное стекло",
+      "description": "Для защиты средств связи, бытовой электроники и других предметов от царапин и случайных механических повреждений используются специальные стекла и пленки. Такие многослойные светопрозрачные листовые композиции на основе силикатного стекла и полимеров сочетают в себе защитные и эстетические свойства.",
+      "category": 2,
+      "price": "10.00",
+      "slug": "protglass"
+    }
+  },
+  {
+    "model": "catalog.addon",
+    "pk": 2,
+    "fields": {
+      "name": "Чехол",
+      "description": "Покрышка из ткани или кожи для вещей.",
+      "category": 2,
+      "price": "10.00",
+      "slug": "protcase"
+    }
+  },
+  {
+    "model": "catalog.addon",
+    "pk": 3,
+    "fields": {
+      "name": "Наушники",
+      "description": "Стереофонические нау́шники (наушники) — два телефона с оголовьем, предназначенные для подключения к бытовым радиоэлектронным аппаратам. Наушники представляют собой пару небольших по размеру головных телефона или блока наушника, надеваемых на голову или вставляемых прямо в ушные каналы. ... head — голова, phone — телефон).",
+      "category": 2,
+      "price": "300.00",
+      "slug": "headphones"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Asus ZenBook 14 UM425U",
+      "description": "Тонкость и легкость во всем!\r\nНовый ноутбук ZenBook 14 на базе мобильного процессора AMD серии Ryzen™ 4000 представляет собой тонкое и легкое устройство с высокой производительностью и полноценным комплектом интерфейсов (разъемы HDMI, USB-C®, USB-A и microSD). Эта универсальная модель с классическим дизайном отлично подойдет для всех, кто постоянно находится в движении.",
+      "category": 1,
+      "price": "200.00",
+      "slug": "asus_zenbook_14_um425u",
+      "image": "static/img/Без_названия_2_1.png",
+      "big_image": "static/img/Без_названия_2.jpg",
+      "cart_image": "",
+      "quantity": 1,
+      "addons": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Xiaomi Mi 11 Lite",
+      "description": "Уникальный дизайн\r\nMi 11 Lite обладает сверхлегким весом 159 г и толщиной всего 6,81 мм. Ощутите новые эмоции, ведь симметричные и супертонкие боковые и верхние грани шириной 1,88 мм расширяют пространство для большого количества визуальных эффектов.",
+      "category": 2,
+      "price": "300.00",
+      "slug": "xiaomi_11_lite",
+      "image": "static/img/imgonline-com-ua-Resize-5Z6PNTIeKG.jpg",
+      "big_image": "static/img/imgonline-com-ua-Resize-AGOLdY3OxJsk8R.jpg",
+      "cart_image": "",
+      "quantity": 96,
+      "addons": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Xiaomi Mi Desktop Monitor 27",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p",
+      "category": 3,
+      "price": "350.00",
+      "slug": "mi_desktop_monitor_27",
+      "image": "static/img/monitor_2QqDkTP.jpg",
+      "big_image": "static/img/imgonline-com-ua-Resize-ov64h7Io2w.jpg",
+      "cart_image": "",
+      "quantity": 93,
+      "addons": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Test Notebook",
+      "description": "Test",
+      "category": 1,
+      "price": "234.00",
+      "slug": "test_notebook",
+      "image": "catalog/static/img/Без_названия_4.jpeg",
+      "big_image": "",
+      "cart_image": "",
+      "quantity": 323,
+      "addons": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Ноутбуки",
+      "description": "Ноутбук (англ. notebook — блокнот) — переносной компьютер, в корпусе которого объединены типичные компоненты ПК, включая дисплей, клавиатуру и устройство указания (обычно сенсорная панель или тачпад), а также аккумуляторные батареи. Ноутбуки отличаются небольшими размерами и весом, время автономной работы ноутбуков варьируется в пределах от 2 до 15 часов.",
+      "slug": "notebook"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Смартфоны",
+      "description": "Смартфо́н (англ. smartphone — умный телефон) — мобильный телефон (современный — как правило, с сенсорным экраном), дополненный функциональностью карманного персонального компьютера.",
+      "slug": "smartphone"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Мониторы",
+      "description": "Монитор — устройство оперативной визуальной связи пользователя с управляющим устройством и отображением данных, передаваемых с клавиатуры, мыши или центрального процессора.",
+      "slug": "montor"
+    }
+  },
+  {
+    "model": "cart.cart",
+    "pk": 1,
+    "fields": {
+      "user": 36,
+      "active": true
+    }
+  },
+  {
+    "model": "cart.cartproduct",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "cart": 1,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "cart.cartproduct",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "cart": 1,
+      "quantity": 13
+    }
+  },
+  {
+    "model": "cart.cartproduct",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "cart": 1,
+      "quantity": 15
+    }
+  },
+  {
+    "model": "cart.customer",
+    "pk": 1,
+    "fields": {
+      "user": 36
+    }
+  },
+  {
+    "model": "cart.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "date": "2021-10-25",
+      "products": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "cart.order",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "date": "2021-10-25",
+      "products": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "cart.order",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "date": "2021-10-25",
+      "products": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$jerMaxJtEfPNms6ecFqfPy$ZLnj5qJgraaJSZpUl5BqxxYeS4gOWNnojaSYmu3Qkc4=",
+      "last_login": "2021-10-01T19:09:15.623Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-09-14T06:17:03.334Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$cRImtT7nppYM7tVwDGzkyr$VO6wRKaFsOsdud8OJxbV5wxy/2Zc1/Pcbbwr1R03EUs=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "",
+      "first_name": "",
+      "last_name": "",
+      "email": "akislix6@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T19:37:35.703Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$sq1oP9oTq8sOvLLaJo6n8X$7iF+MRiFZzQbg4GDKmMS3efFOglLEuC78nr7Nwof0IE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "weckoe",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T19:44:45.580Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$YdETTwC4N4Hv3L3VXNLLBg$x7sAUBMIlAAUR4rFtczwWyMMkG33Qn0LgLPH1biAc7A=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lox",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T20:30:13.863Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$xmUPTQtbpZGd7MEtrZPA56$44Gotkh/jerza9c4LDZucm1sdJs16WtNC10DXCr7Ebw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "fssda",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T20:30:32.229Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$C3MpQT1NjrH6RybRsCGFte$ZWVlAMohdbYJ5W5yfzQ+qw6WlwrVWJcPKuFo8okB7z0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "02240039@study.bsuir.by",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T20:30:57.117Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$TgKuPvwGqcQkC4zrqDcJuz$OJEfRnG5p9aDQ9mmUGAKo3XYKPiw6vlESLgJdcys4ZI=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kfdsa",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T20:36:23.167Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$M5HFOi7cLTf72gFatcXHy7$4ejODqvef1Wr1+ZducaNpD3KavoD6eFBERXqCIrbP8E=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "hgd",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T20:37:34.556Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$1ttF0I9JSV8C$nQuy5u2io+r7HWAQ8eVJEfpgxL94MCJ3awMIBgoOWyo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "gsfd",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T20:45:14.760Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$mylKErcDd4Sk$Es71xWHvcnTM/zAc+e1MjDFSPj+ZeJIuFV8VlP2JaQ4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "daca",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T20:52:15.997Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$XGLrzWK9WudIlGX3HBBaTM$TGUoR/up+uUOrcXXWCVksWTLFMYIwt7cSmnIjY8jv7E=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "LFDS",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:07:01.969Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$X2t0cOvWMkjRYCp8bjO7e0$UwruCvGxtIz7z/qxIKV+psByOsbkbusJmYij5cXDsNI=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "GFSD",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:07:58.769Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$AyBxbY5Zgmmd$FoJM2IbaxH2KVM+xBnh4gb07+AMPTarRUJjzSSOhgPo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "FDASG",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:09:17.725Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$ozIXgqHAKupmoEYuEpNF8I$xFt5T2gkPw4B4/dQFptv9ZW7WT2F9MuhWE0vBRloggA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "GHDF",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:11:15.245Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$yZv7F0aUs1ZA9iEGI5LEWF$rACg6HurS7cNV4owfjMC1NCdBUijrGpFqaScMqBQlWQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pouityoer",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:13:50.331Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 16,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$zN8bJ3lzdm6dVUdcU3dtBi$Zmv3O16D0HrOJSRwdtck5jJucndNfW/WMjxja0u/7x0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "oiupo",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:15:55.686Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 17,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pijm",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:18:11.253Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 18,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$cY6VCDHhHvCy$/IQm0sATj5iyX2CETyEJGadP1PE8R28fA2BjEpoOzVE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "gfs",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:20:11.978Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 19,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$Ymw9znFrE5Sp$nxpL17NI9mq+CMQ+n1YojCGGId8lfhZ7Ir8xnRdQqd0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "weckoe54",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:20:45.438Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 20,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$6yYNpEOobFuALDzE4o7lOl$a/DRt8cp5LWx6JwjjU/nVkQyQzgu6XGnSV5VFVgFJDA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kgmsldk",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-21T21:26:59.473Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 21,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$drl9E1PYGFNwR150k17l42$QWabsNK+Y5Zl0xqUrcA56gvU4v1XfczwIgTImfcHty8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "hjgjsjkgjkls",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T17:34:18.654Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 22,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$jnyEvdqnyb6VpdMLLfWknS$hrJW89fmd5/xGfyWGNATpV/KSfEtDEG2BZi/kwK096s=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kirill",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T17:53:01.784Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 23,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$INpfXI5N5f8nKbm59OOCXr$9DP2PmTOT7DS/uUXsyMuHPWYXgv0rnzPWlUexwR+TdQ=",
+      "last_login": "2021-10-09T20:30:35.593Z",
+      "is_superuser": false,
+      "username": "admin1",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T20:17:54.852Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 24,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$CuLcMlP87g9iBMTPa6n4js$B3lNUIsqqhQQ9Hej05RcU+wUs0xlksKwRPRvDW/MgLs=",
+      "last_login": "2021-09-22T21:11:36.655Z",
+      "is_superuser": false,
+      "username": "keril",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T21:11:15.990Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 25,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$5Y02mJhVu45mSwv6VQwxtA$SqZfNcICwX8EGEcu4xGS0lek3tkM765//z/0mvLX42k=",
+      "last_login": "2021-09-22T21:33:08.043Z",
+      "is_superuser": false,
+      "username": "keril123",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T21:12:28.577Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 26,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$ZbY79TyoPMrwddmL30ETdV$xrX1RtWOKtGWRuVansj+9HPhJaWgcVO+M35enYCrsWA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "iouopi",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T21:15:17.780Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 27,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$4wyO76sU4Y5OATI59XNX9F$A/nVyISGqnLobtsPvAWeB8Xptn20K528XFIlBQ3a1/s=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "hjsldjf",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T21:30:00.247Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 28,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$iBBh7I7lxxlL8BAacfZzSn$VRM2k83T4NaKhK/P4cGw2yJ85180wirS4+UuRXFbMuw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "poiooi",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T21:33:22.725Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 29,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$EcDbdcg6nMTVyOT1XjM4d3$JH1itYmbfCh+7ntznuGcgxT4KUNm2gEDGsNmsOGTW1Y=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "itrwitewr",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-22T21:36:51.195Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 30,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$6u80jpf4SwoBNjWHOER3gS$NeIHndLmASUpjbqF3cLSlSQHLpMNysA0nC+zk+zTqRY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kirilllishtvan",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-24T16:09:15.136Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 31,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$DAaetDNvsrxlppWLO2VGbQ$Rw+j52xFqPFWLHFhxF9Y6zgniBEGXXRY5CTjgf7cLRI=",
+      "last_login": "2021-09-25T06:52:03.147Z",
+      "is_superuser": false,
+      "username": "timoxa",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-09-25T06:51:22.146Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 32,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$LvwZV7WfnT27m0qDxyc9ND$h/fGB4Zu+Tfo44XxCcbBrQM3qnRKYVrUECzO+ND3xDI=",
+      "last_login": "2021-10-08T07:36:50.763Z",
+      "is_superuser": false,
+      "username": "kirill123",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-10-02T20:53:29.815Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 33,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$nOeZy0Kl27Q0e2dVto02fu$iw788ox+sYZxQA/9/3nOy1DPvq8C7Oppj9pznB9NkMM=",
+      "last_login": "2021-10-09T20:30:25.195Z",
+      "is_superuser": false,
+      "username": "tima",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-10-05T07:57:38.959Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 34,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$4fJizw4rt1JPhRJj29f7CS$Jq9kNmS2HIONew3FO4G7q3DbkymxtMNMcfMZsk9+Ryc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "admin2",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-10-05T08:06:07.215Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 35,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$qqHkkXafK1Jer0zQ1BInbD$ntlluTENiZiRj+ViJOJ8a9iGp6BMW4NI2KkmybHsKjo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kirill432",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-10-09T20:29:51.382Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authentication.user",
+    "pk": 36,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$UDGtYfftFL5bVDz55ddRef$4zeQa0uOxd2ScEGLUZkbMaGIa2jtSmdQLHthkBjLcG8=",
+      "last_login": "2021-10-29T17:53:10.704Z",
+      "is_superuser": false,
+      "username": "lox1",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-10-11T18:21:10.275Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
