@@ -2,10 +2,9 @@ from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
-from catalog.views import home
-from .forms import UserRegistrationForm, LoginForm
+from authentication.forms import UserRegistrationForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
-from .bl import new_user_add
+from authentication.bl import create_new_user
 
 
 def login_view(request):
@@ -35,7 +34,7 @@ def registration(request):
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)
         if user_form.is_valid():
-            new_user_form = new_user_add(user_form)
+            new_user_form = create_new_user(user_form)
             return redirect(reverse('catalog:home'))
     else:
         user_form = UserRegistrationForm()

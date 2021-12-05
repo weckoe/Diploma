@@ -33,7 +33,7 @@
                                     <div class="container">
                                         <h1>Quantity</h1>
                                         <hr>
-                                        <input name="quantity" max="{{ product.product.quantity }}"
+                                        <input name="quantity" type = "number" max="{{ product.product.quantity }}"
                                                value="{{ product.quantity }}">
                                         <button href="{% url 'cart:change_quantity' product.id %}">Change</button>
                                     </div>

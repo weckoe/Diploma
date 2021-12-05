@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = parse_bool(os.getenv('DEBUG'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split()
 
 # Application definition
 
@@ -77,7 +77,7 @@ TEMPLATES = [
         },
     },
 ]
-
+# docker run -v postgres_volume:/var/lib/postgresql/data --env-file ./.env -p 5433:5432 postgres:14.0-alpine3.14
 WSGI_APPLICATION = 'onlineshop.wsgi.application'
 
 # Database
@@ -86,12 +86,16 @@ WSGI_APPLICATION = 'onlineshop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'test_django_db',
-        'USER': 'user_test',
-        'PASSWORD': 'user_test',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': os.getenv('POSTGRES_DB'),
+        'USER': os.getenv('POSTGRES_USER'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'HOST': os.getenv('POSTGRES_HOST'),
+        'PORT': os.getenv('POSTGRES_PORT'),
     }
+}
+DATABASES['default']['TEST'] = {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': os.path.join(BASE_DIR, 'test_db.sqlite3'),
 }
 
 # Password validation
@@ -115,8 +119,8 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTH_USER_MODEL = 'authentication.User'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
+LOGIN_URL = '/auth/login/'
+
 
 LANGUAGE_CODE = 'en-us'
 

@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django import forms
 
-User = get_user_model()
+user = get_user_model()
 
 
 class UserRegistrationForm(forms.ModelForm):
@@ -9,10 +9,12 @@ class UserRegistrationForm(forms.ModelForm):
     password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
 
     class Meta:
-        model = User
+        model = user
         fields = ('username',)
 
     def clean_password2(self):
+        # if User.objects.get(username=self.cleaned_data['username']):
+        #     raise forms.ValidationError('This username already exists.')
         if self.cleaned_data['password1'] != self.cleaned_data['password2']:
             raise forms.ValidationError('Passwords don\'t match.')
         return self.cleaned_data['password2']
@@ -21,3 +23,4 @@ class UserRegistrationForm(forms.ModelForm):
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+

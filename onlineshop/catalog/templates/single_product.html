@@ -18,14 +18,15 @@
                 <div class="d-flex">
                     <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
                            style="max-width: 3rem"/>
-                    {% if not is_in_cart %}
-                     <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'cart:add-to-cart' single_product.slug %}">Add To Cart</a>
+                    {% if is_in_cart %}
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href='{% url 'cart:cart'%}'>In Cart</a>
                                 </div>
                         {% else %}
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href='{% url 'cart:cart'%}'>In Cart</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'cart:add-to-cart' single_product.slug %}">Add To Cart</a>
                                 </div>
                     {% endif %}
                 </div>
+                <p>Left in stock: {{ single_product.quantity }}</p>
             </div>
         </div>
     </div>
