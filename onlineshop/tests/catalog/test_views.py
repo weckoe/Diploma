@@ -43,3 +43,15 @@ class TestCategoriesView(TestCase):
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(response.templates[0].name, 'single_category.html')
         self.assertEqual(response.context['single_category'].name, TEST_ALL_CATEGORIES['name'])
+
+
+class TestHome(TestCase):
+    def test_home(self):
+        client = Client()
+        category = Category.objects.create(**TEST_ALL_CATEGORIES)
+        product = Product.objects.create(**TEST_ALL_PRODUCTS, category=category)
+        url = reverse('catalog:home')
+        response = client.get(url)
+        breakpoint()
+        self.assertEqual(response.status_code, HTTPStatus.OK)
+        self.assertEqual(response.context)

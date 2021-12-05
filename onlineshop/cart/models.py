@@ -1,7 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User
 from catalog.models import Product
 from django.conf import settings
+from django.contrib.auth.models import User
 
 
 class Cart(models.Model):
@@ -11,7 +11,7 @@ class Cart(models.Model):
 
 class CartProduct(models.Model):
     product = models.ForeignKey('catalog.Product', on_delete=models.CASCADE)
-    cart = models.ForeignKey('Cart', on_delete=models.CASCADE, null=True)
+    cart = models.ForeignKey('Cart', on_delete=models.CASCADE, null=False)
     quantity = models.PositiveIntegerField(default=1)
 
 

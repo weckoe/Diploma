@@ -1,25 +1,26 @@
 from django.core.paginator import Paginator
-from django.http import HttpResponseNotFound, request
 from django.http import Http404
 from cart.models import CartProduct
-from .models import Category, Product, Addon
+from .models import Category, Product
+
+NUMBER_OF_PRODUCTS = 25
 
 
-def single_category(category_slug):
-    category_products = Category.objects.prefetch_related('product_set').filter(slug=category_slug).first()
-    if single_category is not None:
+def category_context(category_slug):
+    category = Category.objects.prefetch_related('product_set').filter(slug=category_slug).first()
+    if category_context is not None:
         context = {
-            'single_category': category_products,
+            'single_category': category,
         }
     else:
-        return HttpResponseNotFound('<h1>Page not found</h1>')
+        raise Http404
 
     return context
 
 
 def all_products(page_number):
     products = Product.objects.all()
-    paginator = Paginator(products, 25)
+    paginator = Paginator(products, NUMBER_OF_PRODUCTS)
     context = {
         'products': paginator.get_page(page_number),
     }
@@ -36,8 +37,6 @@ def single_product(product_slug):
 
 
 def is_product_in_cart(product, user):
-
-    if user.is_authenticated:
-        CartProduct.objects.filter(product=product, cart__user=user, cart__active=True).first()
+    if CartProduct.objects.filter(product=product, cart__user=user, cart__active=True).first():
         return True
     return False

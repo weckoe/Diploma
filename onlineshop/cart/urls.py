@@ -1,6 +1,6 @@
-from django.contrib.auth import get_user_model
-from django.urls import path
 from .views import add_to_cart, cart, checkout, change_quantity
+from django.urls import path
+
 
 app_name = 'cart'
 urlpatterns = [

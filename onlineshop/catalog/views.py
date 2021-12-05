@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import get_user_model
-from .bl import single_category, all_products, single_product, is_product_in_cart
+from .bl import category_context, all_products, single_product, is_product_in_cart
 
 User = get_user_model()
 
@@ -12,7 +12,7 @@ def home(request):
 
 
 def categories_view(request, category_slug):
-    context = single_category(category_slug)
+    context = category_context(category_slug)
     return render(request, 'single_category.html', context)
 
 
